@@ -46,9 +46,10 @@ For preprocessing, I used StandardScaler for numerical features and OneHotEncode
 
 ## 3. GitHub Repository
 
-I have maintained the project files in a GitHub repository.
+I have uploaded my project files to GitHub.
 
-**GitHub Repository Link:** To be added after uploading the project.
+**GitHub Repository Link:**
+https://github.com/chandarkumar7385/2026AK05314_ML_Assignment_2
 
 The repository includes my Jupyter Notebook, Streamlit application, saved models, test dataset and requirements file.
 
@@ -122,7 +123,7 @@ The application provides the following features:
 5. Display the confusion matrix.
 6. Display the classification report.
 
-**Streamlit Application Link:** To be added after deployment.
+**Streamlit Application Link:** https://2026ak05314mlassignment2-9tsmx23nggsactnbbgex6p.streamlit.app/
 
 ## 8. Project Files
 
