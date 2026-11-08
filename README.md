@@ -55,9 +55,7 @@ The repository includes my Jupyter Notebook, Streamlit application, saved models
 
 ## 4. Comparison of Classification Models
 
-After training all five models, I evaluated them using the test dataset.
-
-The results obtained are shown below:
+After training all five models, I evaluated them using the test dataset. The results obtained are shown below. The models are arranged in columns and the evaluation metrics are arranged in rows.
 
 | Evaluation Metric | Logistic Regression | Decision Tree | KNN | Gaussian Naive Bayes | Linear SVM |
 |---|---:|---:|---:|---:|---:|
@@ -68,7 +66,18 @@ The results obtained are shown below:
 | F1 Score | 0.3732 | 0.3014 | 0.2911 | 0.4123 | 0.3746 |
 | MCC | 0.2853 | 0.2113 | 0.2833 | 0.3271 | 0.2867 |
 
-## 5. Observations from the Models
+## 5. Model-wise Observations
+
+| ML Model Name | Observation about model performance |
+|---|---|
+| **Logistic Regression** | Achieved the highest recall (0.6238) and the highest AUC (0.7722). It identifies more actual subscribers than the other models, but its precision is low (0.2662), so some positive predictions are incorrect. |
+| **Decision Tree** | Achieved 0.8401 accuracy, but its AUC (0.6036), recall (0.2949), F1 Score (0.3014) and MCC (0.2113) were relatively low. Its overall classification performance was weaker in this experiment. |
+| **KNN** | Achieved the highest accuracy (0.8874) and precision (0.5529). However, its recall was the lowest (0.1975), meaning it missed many customers who actually subscribed. Accuracy alone therefore does not show its full performance on this imbalanced dataset. |
+| **Gaussian Naive Bayes** | Achieved the highest F1 Score (0.4123) and MCC (0.3271). It provided the best balance between precision (0.3708) and recall (0.4641) among the five models based on these results. |
+| **Linear Support Vector Machine** | Achieved recall of 0.6200, close to Logistic Regression, and AUC of 0.7718. Its precision was low (0.2684), while its F1 Score (0.3746) and MCC (0.2867) were below Gaussian Naive Bayes. |
+| **Overall Winner for this dataset** | Gaussian Naive Bayes was selected as the overall winner because it achieved the highest F1 Score (0.4123) and MCC (0.3271). KNN had the highest accuracy, but its very low recall (0.1975) makes accuracy alone an unsuitable basis for choosing the best model on this imbalanced dataset. |
+
+## 6. Detailed Observations from the Models
 
 ### 5.1 Logistic Regression
 
@@ -102,7 +111,7 @@ Linear SVM achieved an accuracy of 0.7578 and AUC of 0.7718.
 
 Its recall was 0.6200, which was close to Logistic Regression. The F1 score was 0.3746 and MCC was 0.2867.
 
-## 6. Overall Best Model
+## 7. Overall Best Model
 
 After comparing the results of all five models, I found that Gaussian Naive Bayes performed better in terms of F1 score and MCC.
 
@@ -110,7 +119,7 @@ KNN achieved the highest accuracy, but its recall was low. Since the dataset is 
 
 Based on the F1 score and MCC, I selected Gaussian Naive Bayes as the best overall model for this experiment.
 
-## 7. Streamlit Application
+## 8. Streamlit Application
 
 I have developed a Streamlit application using Python.
 
@@ -125,7 +134,7 @@ The application provides the following features:
 
 **Streamlit Application Link:** https://2026ak05314mlassignment2-9tsmx23nggsactnbbgex6p.streamlit.app/
 
-## 8. Project Files
+## 9. Project Files
 
 The project contains the following files and folders:
 
@@ -136,7 +145,7 @@ The project contains the following files and folders:
 - `model/` – Contains all five saved trained models.
 - `README.md` – Contains the project description and model comparison results.
 
-## 9. Conclusion
+## 10. Conclusion
 
 Through this assignment, I got an opportunity to implement and compare five different classification algorithms using the Bank Marketing dataset.
 
