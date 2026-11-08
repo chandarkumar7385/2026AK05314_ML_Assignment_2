@@ -55,16 +55,15 @@ The repository includes my Jupyter Notebook, Streamlit application, saved models
 
 ## 4. Comparison of Classification Models
 
-After training all five models, I evaluated them using the test dataset. The results obtained are shown below. The models are arranged in columns and the evaluation metrics are arranged in rows.
+After training all five models, I evaluated them using the test dataset. The results obtained are shown below. Each row represents a model, and each column represents an evaluation metric.
 
-| Evaluation Metric | Logistic Regression | Decision Tree | KNN | Gaussian Naive Bayes | Linear SVM |
-|---|---:|---:|---:|---:|---:|
-| Accuracy | 0.7548 | 0.8401 | 0.8874 | 0.8452 | 0.7578 |
-| AUC | 0.7722 | 0.6036 | 0.7027 | 0.7514 | 0.7718 |
-| Precision | 0.2662 | 0.3083 | 0.5529 | 0.3708 | 0.2684 |
-| Recall | 0.6238 | 0.2949 | 0.1975 | 0.4641 | 0.6200 |
-| F1 Score | 0.3732 | 0.3014 | 0.2911 | 0.4123 | 0.3746 |
-| MCC | 0.2853 | 0.2113 | 0.2833 | 0.3271 | 0.2867 |
+| ML Model Name | Accuracy | AUC | Precision | Recall | F1 Score | MCC |
+| --- | --- | --- | --- | --- | --- | --- |
+| Logistic Regression | 0.7548 | 0.7722 | 0.2662 | 0.6238 | 0.3732 | 0.2853 |
+| Decision Tree | 0.8401 | 0.6036 | 0.3083 | 0.2949 | 0.3014 | 0.2113 |
+| KNN | 0.8874 | 0.7027 | 0.5529 | 0.1975 | 0.2911 | 0.2833 |
+| Gaussian Naive Bayes | 0.8452 | 0.7514 | 0.3708 | 0.4641 | 0.4123 | 0.3271 |
+| Linear SVM | 0.7578 | 0.7718 | 0.2684 | 0.6200 | 0.3746 | 0.2867 |
 
 ## 5. Model-wise Observations
 
@@ -77,41 +76,7 @@ After training all five models, I evaluated them using the test dataset. The res
 | **Linear Support Vector Machine** | Achieved recall of 0.6200, close to Logistic Regression, and AUC of 0.7718. Its precision was low (0.2684), while its F1 Score (0.3746) and MCC (0.2867) were below Gaussian Naive Bayes. |
 | **Overall Winner for this dataset** | Gaussian Naive Bayes was selected as the overall winner because it achieved the highest F1 Score (0.4123) and MCC (0.3271). KNN had the highest accuracy, but its very low recall (0.1975) makes accuracy alone an unsuitable basis for choosing the best model on this imbalanced dataset. |
 
-## 6. Detailed Observations from the Models
-
-### 5.1 Logistic Regression
-
-Logistic Regression achieved an accuracy of 0.7548 and AUC of 0.7722.
-
-I observed that this model achieved the highest recall of 0.6238 among the five models. However, its precision was 0.2662, which is comparatively low.
-
-### 5.2 Decision Tree
-
-Decision Tree achieved an accuracy of 0.8401.
-
-However, its AUC was 0.6036 and recall was 0.2949. Its F1 score and MCC were also lower compared with the other models.
-
-### 5.3 K-Nearest Neighbours
-
-KNN achieved the highest accuracy of 0.8874 and precision of 0.5529.
-
-However, its recall was only 0.1975. This means that the model could not identify many customers who actually subscribed to a term deposit.
-
-### 5.4 Gaussian Naive Bayes
-
-Gaussian Naive Bayes achieved an accuracy of 0.8452 and AUC of 0.7514.
-
-I observed that this model achieved the highest F1 score of 0.4123 and MCC of 0.3271 among all five models.
-
-It provided a better balance between precision and recall compared with the other models in this experiment.
-
-### 5.5 Linear Support Vector Machine
-
-Linear SVM achieved an accuracy of 0.7578 and AUC of 0.7718.
-
-Its recall was 0.6200, which was close to Logistic Regression. The F1 score was 0.3746 and MCC was 0.2867.
-
-## 7. Overall Best Model
+## 6. Overall Best Model
 
 After comparing the results of all five models, I found that Gaussian Naive Bayes performed better in terms of F1 score and MCC.
 
@@ -119,7 +84,7 @@ KNN achieved the highest accuracy, but its recall was low. Since the dataset is 
 
 Based on the F1 score and MCC, I selected Gaussian Naive Bayes as the best overall model for this experiment.
 
-## 8. Streamlit Application
+## 7. Streamlit Application
 
 I have developed a Streamlit application using Python.
 
@@ -134,7 +99,7 @@ The application provides the following features:
 
 **Streamlit Application Link:** https://2026ak05314mlassignment2-9tsmx23nggsactnbbgex6p.streamlit.app/
 
-## 9. Project Files
+## 8. Project Files
 
 The project contains the following files and folders:
 
@@ -145,7 +110,7 @@ The project contains the following files and folders:
 - `model/` – Contains all five saved trained models.
 - `README.md` – Contains the project description and model comparison results.
 
-## 10. Conclusion
+## 9. Conclusion
 
 Through this assignment, I got an opportunity to implement and compare five different classification algorithms using the Bank Marketing dataset.
 
